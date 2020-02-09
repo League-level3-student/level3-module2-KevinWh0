@@ -19,6 +19,8 @@ class _00_SortedArrayCheckerTest {
 	void testDoubleArray() {
 		double[] unsorted = {3, 2, 9, 3, 1, 0};
 		double[] sorted = {0, 1, 2, 2, 3, 4};
+
+
 		
 		assertFalse(_00_SortedArrayChecker.doubleArraySorted(unsorted));
 		assertTrue(_00_SortedArrayChecker.doubleArraySorted(sorted));

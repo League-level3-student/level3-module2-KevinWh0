@@ -8,16 +8,15 @@ public class _00_SortedArrayChecker {
 	// array is in ascending order and false otherwise
 	static boolean intArraySorted(int arry[]) {
 
-		int last = Integer.MIN_VALUE;
+		int last = arry[0]-1; // -2147483648
 		for (int i = 0; i < arry.length; i++) {
 
-			if (!(last <= arry[i])) {
+			if (last > arry[i]) {
 				return false;
 			}
 
 			last = arry[i];
 		}
-
 		return true;
 	}
 
@@ -28,20 +27,22 @@ public class _00_SortedArrayChecker {
 	// array is in ascending order and false otherwise
 
 	static boolean doubleArraySorted(double arry[]) {
+		
+		
+//		double last = arry[0]-1;
+		for (int i = 0; i < arry.length-1; i++) {
 
-		double last = Double.MIN_VALUE;
-		for (int i = 0; i < arry.length; i++) {
-
-			if (!(last <= arry[i])) {
+//			if (last > arry[i]) {
+			if(arry[i] > arry[i+1]) {
 				return false;
 			}
 
-			last = arry[i];
+//			last = arry[i];
 		}
 
 		return true;
 	}
-	
+
 	// 3. Write a static method called charArraySorted.
 	// This method takes in an array of characters
 	// and it returns a boolean.
@@ -71,14 +72,25 @@ public class _00_SortedArrayChecker {
 	// (Use the compareTo(String) method)
 
 	static boolean stringArraySorted(String arry[]) {
+		int charLook = 1;
+		// 97 = a
+		for (int i = 0; i < arry.length - 1; i++) {
+			//for (int j = 0; j < arry[i].length(); j++) {
+				//System.out.println((int)Character.toLowerCase(arry[i].charAt(0))+"  " + Character.toLowerCase(arry[i].charAt(0)));
+				if ((Character.toLowerCase(arry[i].charAt(0)) > Character.toLowerCase(arry[i + 1].charAt(0)))) {
+					return false;
+				}
+//				}else if((Character.toLowerCase(arry[i].charAt(j)) == Character.toLowerCase(arry[i + 1].charAt(j)))) {
+////					charLook++;
+////					if ((Character.toLowerCase(arry[i].charAt(j)) > Character.toLowerCase(arry[i + charLook].charAt(j)))) {
+////						//return false;
+////					}
+//				}
 
-		double last = Integer.MIN_VALUE;
-		for (int i = 0; i < arry.length; i++) {
-
-			
+			//}
 		}
 
 		return true;
 	}
-	
+
 }
