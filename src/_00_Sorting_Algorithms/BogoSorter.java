@@ -42,8 +42,8 @@ public class BogoSorter extends Sorter {
 		Random rand = new Random();
 		int counter = 0;
 		while(inOrder(array)) {
-			int rand1 = rand.nextInt(array.length/2);
-			int rand2 = rand.nextInt(array.length/2);
+			int rand1 = rand.nextInt(array.length);
+			int rand2 = rand.nextInt(array.length);
 			if(array[rand1] > array[rand2]) {
 				int ram = array[rand2];
 				array[rand2] =  array[rand1];
