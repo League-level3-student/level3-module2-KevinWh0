@@ -19,12 +19,16 @@ class _04_SearchTest {
 	public void testBinarySearch() {
 		//2. use the assertEquals method to test your binary search method.
 		//   remember that the array must be sorted
+		int[] e = {-200,0,1,2,3,4,5,6};
+		
+		assertEquals(2, _01_BinarySearch.binarySearch(e, 0, e.length-1, 2));
 	}
 	
 	@Test
 	public void testInterpolationSearch() {
 		//3. use the assertEquals method to test your interpolation search method.
 		//   remember that the array must be sorted and evenly distributed
+		
 	}
 	
 	@Test
