@@ -12,7 +12,7 @@ public class _03_ExponentialSearch {
 	{
 		// 2. Check if the array element at 0 is the value.
 		//    If it is, then return 0.
-
+		if(array[0] == value) return 0;
 		// 3. create an integer called counter and initialize it to 1;
 		
 		//4. make while loop that checks for two conditions:
