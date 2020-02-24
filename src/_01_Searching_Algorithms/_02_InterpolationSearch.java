@@ -16,7 +16,7 @@ public class _02_InterpolationSearch {
 		//   initialize them to 0 and the length of the array minus one
 		//   respectively
 		int start = 0;
-		int end = 0;
+		int end = array.length-1;
 		
         //3. Make a while loop that runs while the following conditions are true:
         //   start is less than or equal to end
@@ -27,7 +27,7 @@ public class _02_InterpolationSearch {
         	//  initialize it to the following:
         	//  start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
         	//  This calculates the center of the array keeping the even distribution in mind.
-			int position = start + (((end - start) / 1 + ((array[end] - array[start])) * (value - array[start])));
+			int position = start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
             //5. if the array element at position is equal to the value,
             //   then we found it and can return position.
 			if(array[position] == value) {
