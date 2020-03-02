@@ -91,8 +91,28 @@ public class Algorithms {
 		return str;
 	}
 
-	public static String sortWords(List<String> words) {
+	public static List<String> sortWords(List<String> words) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		
+		boolean sorted = false;
+		while(!sorted) {
+			sorted = true;
+			
+
+			for (int i = 0; i < words.size()-1; i++) {
+				if(words.get(i).compareTo(words.get(i+1)) > 0) {
+					String mem = words.get(i);
+					words.set(i, words.get(i+1));
+					words.set(i + 1, mem);
+					sorted = false;
+				}
+			}
+			
+		}
+	
+		return words;
 	}
+
+
 }
