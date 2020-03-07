@@ -56,7 +56,22 @@ public class Algorithms {
 
 	public static List<String> sortScores(List<Double> results) {
 		// TODO Auto-generated method stub
+		int iShortest = -1;
+		ArrayList<Double> unsortSequence = new ArrayList<>(results);
 
+		ArrayList<Double> sortedSequences = new ArrayList<Double>();
+		for (int j = 0; j < results.size(); j++) {
+			Double shortest = results.get(0);
+			for (int i = 0; i < unsortSequence.size(); i++) {
+
+				if (unsortSequence.get(i) <= shortest) {
+					shortest = results.get(i);
+					iShortest = i;
+				}
+			}
+			sortedSequences.add(unsortSequence.get(iShortest));
+			unsortSequence.remove(iShortest);
+		}
 		return null;
 	}
 
@@ -72,23 +87,23 @@ public class Algorithms {
 	}
 	public static Object sortDNA(List<String> unsortedSequences) {
 		// TODO Auto-generated method stub
-		int loc = 0;
-		ArrayList<String> str = new ArrayList<String>();
-		for (int j = 0; j < unsortedSequences.size(); j++) {
+		int iShortest = -1;
+		ArrayList<String> unsortSequence = new ArrayList<>(unsortedSequences);
 
-			for (int i = 0; i < unsortedSequences.size(); i++) {
-				if (unsortedSequences.get(i).length() < unsortedSequences.get(j).length()) {
-					loc = i;
-					String s = unsortedSequences.get(i);
-					unsortedSequences.get(i); unsortedSequences.get(j);
-					
+		ArrayList<String> sortedSequences = new ArrayList<String>();
+		for (int j = 0; j < unsortedSequences.size(); j++) {
+			int shortest = unsortSequence.get(0).length();
+			for (int i = 0; i < unsortSequence.size(); i++) {
+
+				if (unsortSequence.get(i).length() <= shortest) {
+					shortest = unsortSequence.get(i).length();
+					iShortest = i;
 				}
 			}
-			str.add(unsortedSequences.get(loc));
-
+			sortedSequences.add(unsortSequence.get(iShortest));
+			unsortSequence.remove(iShortest);
 		}
-
-		return str;
+		return sortedSequences;
 	}
 
 	public static List<String> sortWords(List<String> words) {
